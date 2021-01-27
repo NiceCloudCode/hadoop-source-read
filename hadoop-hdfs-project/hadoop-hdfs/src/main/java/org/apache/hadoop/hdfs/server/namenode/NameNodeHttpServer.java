@@ -118,6 +118,10 @@ public class NameNodeHttpServer {
       }
     }
 
+    /**
+     * TODO：Hadoop喜欢封装自己的东西，本来就有RPC服务，NameNode自己封装了一个Hadoop的RPC
+     *  这个地方也是类似，Hadoop自己封装了HttpServer服务，自己封装过后为HttpServer2
+     */
     HttpServer2.Builder builder = DFSUtil.httpServerTemplateForNNAndJN(conf,
         httpAddr, httpsAddr, "hdfs",
         DFSConfigKeys.DFS_NAMENODE_KERBEROS_INTERNAL_SPNEGO_PRINCIPAL_KEY,
